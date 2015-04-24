@@ -12,4 +12,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install virtualenv;
 
+RUN mkdir -p /home/shippable/setup
+
+ADD addBuildDeps.sh /home/shippable/setup/addBuildDeps.sh
+RUN /bin/bash  /home/shippable/setup/addBuildDeps.sh
+
 CMD ["/bin/bash"]
