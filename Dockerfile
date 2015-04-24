@@ -14,7 +14,7 @@ RUN pip install virtualenv;
 
 RUN mkdir -p /home/shippable/setup
 
-ADD addBuildDeps.sh /home/shippable/setup/addBuildDeps.sh
-RUN /bin/bash  /home/shippable/setup/addBuildDeps.sh
+ADD addDeps.sh /home/shippable/setup/addDeps.sh
+RUN /bin/bash  /home/shippable/setup/addDeps.sh
 
 CMD ["/bin/bash"]
